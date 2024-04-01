@@ -1,0 +1,9 @@
+<!--把style放在这是为了练习组件传递，减少页面跳转就不把style放在css文件里了-->
+<div #c0 style="background: #bf3; padding: 15px;">
+    <h2>{{userName}}'s blog</h2>
+    <hr>
+    <app-myc02-child1-modify #c1 (changeUserNameEvent)="doChange($event)"></app-myc02-child1-modify>
+    <br>
+    <app-myc03-child2-photo #c2 [child2Name]="userName"></app-myc03-child2-photo>
+    <button (click)="print()">输出内部有识别符的子组件</button>
+</div>

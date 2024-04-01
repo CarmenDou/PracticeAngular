@@ -1,0 +1,16 @@
+<p>myc04-productlist works!</p>
+<table border="1">
+    <tbody>
+        <tr *ngIf="getProductList().length==0">
+            <td colspan="5">No data</td>
+        </tr>
+        <tr *ngFor="let p of getProductList();">
+            <td>{{p.lid}}</td>
+            <td>{{p.title}}</td>
+            <td>{{p.pic}}</td>
+            <td>{{p.price}}</td>
+            <td><button>删除</button></td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="loadMore()">loading...</button>
